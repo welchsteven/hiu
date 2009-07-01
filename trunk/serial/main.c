@@ -15,8 +15,8 @@
 #include <unistd.h>
 
 
-#define BAUDRATE B38400
-#define PORT "/dev/ttyS1"
+#define BAUDRATE B115200
+#define PORT "/dev/ttyUSB0"
 
 int main()
 {
@@ -79,7 +79,7 @@ int main()
 
 	while (buf[0]!='z')
 	{/* loop for input */
-	  res = read(fd,buf,255);   /* returns after 5 chars have been input */
+	  res = read(fd,buf,1);   /* returns after 1 chars have been input */
 	  buf[res]=0;               /* so we can printf... */
 	  printf(":%s:%d\n", buf, res);
 
