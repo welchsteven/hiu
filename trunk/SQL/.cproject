@@ -618,7 +618,7 @@
 <option id="gnu.cpp.compiler.exe.debug.option.optimization.level.1140680963" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 <option id="gnu.cpp.compiler.exe.debug.option.debugging.level.813676444" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 </tool>
-<tool command="/home/steven/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-gcc" id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1042982960" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
+<tool command="/home/steven/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-gcc -march=armv4" id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1042982960" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
 <option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.189603609" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
 <option id="gnu.c.compiler.exe.debug.option.debugging.level.715606385" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 <option id="gnu.c.compiler.option.misc.verbose.35056215" name="Verbose (-v)" superClass="gnu.c.compiler.option.misc.verbose" value="true" valueType="boolean"/>
@@ -628,7 +628,7 @@
 </option>
 <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.2014392716" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 </tool>
-<tool command="/home/steven/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-gcc" id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.957081855" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug">
+<tool command="/home/steven/CodeSourcery/Sourcery_G++_Lite/bin/arm-none-linux-gnueabi-gcc -march=armv" id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.957081855" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug">
 <option id="gnu.c.link.option.libs.875226480" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
 <listOptionValue builtIn="false" value="sqlite3"/>
 </option>

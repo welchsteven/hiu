@@ -71,12 +71,12 @@ static int callbackM(void *NotUsed, int argc, char **argv, char **azColName){
 
   int MyD20;
   int EnemyAC;
-  int LoopCounter;
+  int LoopCounter = 0;
   int CritMin;
   int CritType;
   int DamageConstant;
   int DamageTotal;
-  int DiceCount;
+  int DiceCount = 0;
   int DiceMax;
   int DamageMultiplier;
 
@@ -101,13 +101,16 @@ static int callbackM(void *NotUsed, int argc, char **argv, char **azColName){
   if (MyD20==1) {
 	  printf("Critical Failure!\n");
   }
-  if (MyD20 >= EnemyAC) {
+  if (MyD20 >= EnemyAC)
+  {
        printf("The enemy was struck!\n");
-       if (MyD20>=CritMin) {
+       if (MyD20>=CritMin)
+       {
     	   printf("Critical Threat!\n");
     	   MyD20=rand()%20+1;
     	   printf("Second Roll: %d\n", MyD20);
-    	   if (MyD20>=EnemyAC) {
+    	   if (MyD20>=EnemyAC)
+    	   {
     		   printf("Critical Damage!\n");
     		   DamageMultiplier=2;
     	   }
@@ -115,12 +118,17 @@ static int callbackM(void *NotUsed, int argc, char **argv, char **azColName){
        }
        LoopCounter=0;
        DamageTotal=0;
-       printf("Damage Rolls:");
-       while (LoopCounter < DiceCount) {
+       printf("Damage Rolls:\n");
+       while (LoopCounter < DiceCount)
+       {
     	   LoopCounter=LoopCounter+1;
-    	   MyD20=rand()%DiceMax+1;
-    	   printf("%d ",MyD20);
+    	   printf("A\n");
+    	   MyD20=(rand()%DiceMax)+1;
+    	   printf("B\n");
+    	   printf("%d \n",MyD20);
+    	   printf("C\n");
     	   DamageTotal+=MyD20;
+    	   printf("D\n");
 
        }
        DamageTotal+=DamageConstant;
@@ -139,7 +147,7 @@ int main(){
   sqlite3 *db;
   char *zErrMsg = 0;
   int rc;
-  char *DatabaseAddress = "/home/frostwing/Desktop/test";
+  char *DatabaseAddress = "./test";
   char *SelectSQL = "Select CritMin, CritType, DamageConstant, DiceCount, DiceMax, MagicEnhancement, ProcessID, ProcessName from Melee";
 
   printf("clear\n");
