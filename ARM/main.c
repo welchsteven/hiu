@@ -6,7 +6,7 @@
  * This is the main program on the ARM board
  */
 #include "main.h"
-#include "packet.h"
+
 
 int main()
 {
@@ -76,6 +76,7 @@ int main()
 			//printf("%c",buf[0]);
 			CurrentPacket = Incoming_Packet_Parser(buf, sizeof(buf));
 			print_packet(CurrentPacket);
+			MeleeSwing(CurrentPacket);
 		}
 		return 0;
 
@@ -93,14 +94,3 @@ void print_packet(Packet Current_Packet)
 	printf("%x, ",Current_Packet.ReturnValue);
 	printf("%x\n",Current_Packet.Checksum);
 }
-
-/*typedef struct
-{
-	unsigned char COM;
-	int8 Team;
-	int16 Player;
-	int8 Subroutine;
-	int16 Process;
-	int16 ReturnValue;
-	int8 Checksum;
-}Packet; */

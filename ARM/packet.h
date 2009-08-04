@@ -1,3 +1,6 @@
+#ifndef _PAKCET_H
+#define _PAKCET_H
+
 //Packet.h
 // this header file contains the subroutines to create and handle packets 
 //    that interact with the HIU(Hardware Interface Unit)
@@ -32,6 +35,7 @@
 // This routine will print the current packet that is in Packet_Buffer[8]
 // The IO stream that you are printing to must be named USB
 
+
 typedef int int16;
 typedef unsigned char int8;
 
@@ -57,7 +61,7 @@ int8 Packet_Buffer[8];
 
 //subroutines
 Packet Incoming_Packet_Parser(int8 Current_Packet[],int size);
-int* PACKET_BUILDER(int TeamID, int PlayerID, int SubID, int ProcessID, int ReturnID);
+int PACKET_BUILDER(int TeamID, int PlayerID, int SubID, int ProcessID, int ReturnID);
 Packet Packet_Input();
 void Print_Packet(int * buffer); // modify for 8 & 9 byte packets use size of array
 int Integrity_Check(Packet currentpacket);
@@ -120,7 +124,7 @@ int Integrity_Check(Packet currentpacket)
 		return 1;
 }
 
-int* PACKET_BUILDER(int TeamID, int16 PlayerID, int SubID, int16 ProcessID, int16 ReturnID)
+int PACKET_BUILDER(int TeamID, int16 PlayerID, int SubID, int16 ProcessID, int16 ReturnID)
 {
    int chk;
    int Packet_Buffer[8];
@@ -190,5 +194,5 @@ int* PACKET_BUILDER(int TeamID, int16 PlayerID, int SubID, int16 ProcessID, int1
 //}
 
 
-
+#endif
 

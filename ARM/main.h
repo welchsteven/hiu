@@ -6,11 +6,11 @@
  */
 
 
-//#ifndef MAIN_H_
-//#define MAIN_H_
+#ifndef MAIN_H_
+#define MAIN_H_
 
 
-//#endif /* MAIN_H_ */
+#endif /* MAIN_H_ */
 
 
 
@@ -20,6 +20,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+
+#include <sqlite3.h>
+#include "packet.h"
+#include "Subroutine.h"
+
 
 #define BAUDRATE B57600
 #define PORT "/dev/ttyUSB0"
