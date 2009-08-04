@@ -1,5 +1,5 @@
-#ifndef _PAKCET_H
-#define _PAKCET_H
+#ifndef _PACKET_H
+#define _PACKET_H
 
 //Packet.h
 // this header file contains the subroutines to create and handle packets 

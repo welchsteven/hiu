@@ -10,7 +10,7 @@
 #define MAIN_H_
 
 
-#endif /* MAIN_H_ */
+
 
 
 
@@ -21,8 +21,10 @@
 #include <string.h>
 #include <unistd.h>
 
-#include <sqlite3.h>
-#include "packet.h"
+
+
+//#include <sqlite3.h>
+//#include "packet.h"
 #include "Subroutine.h"
 
 
@@ -31,4 +33,4 @@
 
 //int init_serial(int &fd);
 
-
+#endif /* MAIN_H_ */
