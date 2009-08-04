@@ -1,9 +1,13 @@
+#ifndef _SOUROUTINE_H
+#define _SOUROUTINE_H
+
 #include <stdio.h>
 #include <sqlite3.h>
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-//#include "packet.h"
+
+#include "packet.h"
 
 struct Player
 {
@@ -67,7 +71,8 @@ struct Player Hero;
 
 */
 
-static int callback(void *NotUsed, int argc, char **argv, char **azColName){
+static int callback(void *NotUsed, int argc, char **argv, char **azColName)
+{
   int i;
 
   int MyD20;
@@ -192,3 +197,6 @@ int MeleeSwing(Packet NewPacket){
 
   return 0;
 }
+
+
+#endif
