@@ -1,0 +1,1 @@
+This code will implement an SQLite database on linux for an ARM platform.
